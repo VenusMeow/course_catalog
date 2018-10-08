@@ -13,5 +13,19 @@ instructor_records.each do |record|
                 first: record['first'],
                 email: record['email'],
                 idnum: record['id'])
+end
 
+course_records = JSON.parse(File.read('public/course.json'))
+course_records.each do |record|
+  Course.create(name: record['name'],
+                code: record['code'],
+                description: record['description'],
+                requirements: record['requirements'].join(","))
+end
+
+subject_records = JSON.parse(File.read('public/subject.json'))
+subject_records.each do |record|
+  Subject.create(name: record['name'],
+                abbreviation: record['abbreviation'],
+                idnum: record['id'])
 end
