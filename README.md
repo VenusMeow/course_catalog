@@ -1,24 +1,11 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is the part 1 of PA Rails.
 
-Things you may want to cover:
+In this rudimentary ruby on rails app, information about subjects, courses and instructors are loaded from JSON databases and displayed on separate pages. Bootstrap CSS stylesheet are used for UI. 
 
-* Ruby version
+The Github repo is at:
+https://github.com/VenusMeow/course_catalog
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+The Heroku deploy is at:
+https://course-catalog-vs.herokuapp.com/
