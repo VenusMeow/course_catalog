@@ -1,9 +1,15 @@
 Rails.application.routes.draw do
+  get 'enroll/enroll'
+
+  get 'enroll/result'
+
   get 'search/search'
 
   get 'search/result'
 
   get 'sessions/new'
+
+  get '/enroll',  to: 'enroll#enroll'
 
   get  '/search',  to: 'search#search'
   post '/search',  to: 'search#result'

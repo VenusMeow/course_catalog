@@ -14,8 +14,6 @@
 </div>
 
 <div>
-
-  <p> You can use the tabs down here to access different databases.</p>
   <p>
   <%= link_to 'Instructors', instructors_path , class: 'btn btn-success'%>
   <%= link_to 'Courses', courses_path ,class: 'btn btn-success'%>
@@ -23,5 +21,33 @@
    <%= link_to 'Search for a course', search_path ,class: 'btn btn-success'%>
   </p>
    <%= link_to "Log out", logout_path, method: :delete %>
+
+</div>
+
+<div>
+
+  <h3> Enrolled courses: </h3>
+  <table class = "table-striped">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Code</th>
+        <th>Description</th>
+        <th>Requirements</th>
+        <th colspan="3"></th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <% @courses.each do |course| %>
+        <tr>
+          <td><%= course.name %></td>
+          <td><%= course.code %></td>
+          <td><%= course.description %></td>
+          <td><%= course.requirements %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
 
 </div>

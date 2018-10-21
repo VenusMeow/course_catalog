@@ -19,9 +19,7 @@
         <td><%= course.code %></td>
         <td><%= course.description %></td>
         <td><%= course.requirements %></td>
-        <td><%= link_to 'Show', course %></td>
-        <td><%= link_to 'Edit', edit_course_path(course) %></td>
-        <td><%= link_to 'Destroy', course, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Enroll', enroll_path(:course_id => course.id) %></td>
       </tr>
     <% end %>
   </tbody>
