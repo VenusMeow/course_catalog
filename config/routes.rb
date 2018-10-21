@@ -1,5 +1,12 @@
 Rails.application.routes.draw do
+  get 'search/search'
+
+  get 'search/result'
+
   get 'sessions/new'
+
+  get  '/search',  to: 'search#search'
+  post '/search',  to: 'search#result'
 
   get  '/signup',  to: 'users#new'
   post '/signup',  to: 'users#create'
