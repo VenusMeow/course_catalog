@@ -1,7 +1,9 @@
-<h1>Results</h1>
+<h1 class="text-center">Results</h1>
 <%= link_to 'Back', :back ,class: 'btn btn-info'%>
 
-<table class = "table-striped">
+</br>
+
+<table class = "table table-striped">
   <thead>
     <tr>
       <th>Name</th>
@@ -19,7 +21,7 @@
         <td><%= course.code %></td>
         <td><%= course.description %></td>
         <td><%= course.requirements %></td>
-        <td><%= link_to 'Enroll', enroll_path(:course_id => course.id) %></td>
+        <td><%= link_to 'Enroll', enroll_path(:course_id => course.id), class: 'btn btn-success'%></td>
       </tr>
     <% end %>
   </tbody>

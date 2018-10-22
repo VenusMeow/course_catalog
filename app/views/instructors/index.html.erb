@@ -1,8 +1,8 @@
-<h1>Instructors</h1>
+<h1 class="text-center">Instructors</h1>
 <%= link_to 'Back',:back ,class: 'btn btn-info'%>
 
-
-<table class = "table-striped">
+</br>
+<table class = "table table-striped">
   <thead>
     <tr>
       <th>Middle</th>
@@ -22,14 +22,9 @@
         <td><%= instructor.first %></td>
         <td><%= instructor.email %></td>
         <td><%= instructor.idnum %></td>
-        <td><%= link_to 'Show', instructor %></td>
-        <td><%= link_to 'Edit', edit_instructor_path(instructor) %></td>
-        <td><%= link_to 'Destroy', instructor, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
 </table>
 
 <br>
-
-<%= link_to 'New Instructor', new_instructor_path %>

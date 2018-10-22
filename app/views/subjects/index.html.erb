@@ -1,8 +1,8 @@
-<h1>Subjects</h1>
+<h1 class="text-center">Subjects</h1>
 <%= link_to 'Back', :back  ,class: 'btn btn-info'%>
 
-
-<table class = "table-striped">
+</br>
+<table class = "table table-striped">
   <thead>
     <tr>
       <th>Name</th>
@@ -18,14 +18,9 @@
         <td><%= subject.name %></td>
         <td><%= subject.abbreviation %></td>
         <td><%= subject.idnum %></td>
-        <td><%= link_to 'Show', subject %></td>
-        <td><%= link_to 'Edit', edit_subject_path(subject) %></td>
-        <td><%= link_to 'Destroy', subject, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
 </table>
 
 <br>
-
-<%= link_to 'New Subject', new_subject_path %>

@@ -1,34 +1,26 @@
-<h1>Course_catalog</h1>
+<h1 class="text-center">Course_catalog</h1>
+
 <div class="row">
   <aside class="col-md-4">
-    <section class="user_info">
-      <h2> Welcome!
-        <%= @user.name %>
-
-
-      </h2>
-
-    </section>
-
+  <h2> Welcome!<%= @user.name %> <%= link_to "Log out", logout_path, method: :delete, class:'btn btn-danger' %></h2>
   </aside>
 </div>
 
 <div>
   <p>
-  <%= link_to 'Instructors', instructors_path , class: 'btn btn-success'%>
-  <%= link_to 'Courses', courses_path ,class: 'btn btn-success'%>
-  <%= link_to 'Subjects', subjects_path ,class: 'btn btn-success'%>
-   <%= link_to 'Search for a course', search_path ,class: 'btn btn-success'%>
+  <%= link_to 'Search for a course', search_path ,class: 'btn btn-info'%>
+  <%= link_to 'View All Instructors', instructors_path , class: 'btn btn-info'%>
+  <%= link_to 'View All Courses', courses_path ,class: 'btn btn-info'%>
+  <%= link_to 'View All Subjects', subjects_path ,class: 'btn btn-info'%>
   </p>
-   <%= link_to "Log out", logout_path, method: :delete %>
 
 </div>
 
 <div>
 
   <h3> Enrolled courses: </h3>
-  <table class = "table-striped">
-    <thead>
+  <table class = "table table-striped">
+    <thead class="thead-dark">
       <tr>
         <th>Name</th>
         <th>Code</th>

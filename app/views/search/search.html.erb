@@ -1,11 +1,5 @@
+<h1 class="text-center">Search for a course    <%= link_to 'Back', :back ,class: 'btn btn-info'%></h1>
 
-<!DOCTYPE html>
-<html>
-  <head>
-   </head>
-  <body>
-    <h2>Search for a course</h2>
-    <%= link_to 'Back', :back ,class: 'btn btn-info'%>
   </br>
   </br>
     <div class="row">
@@ -13,15 +7,15 @@
         <%= form_for(:search, url: search_path) do |f| %>
 
           <%= f.label :subject %>
+        </br>
           <%= f.collection_select :subject, Subject.order(:id),:id,:name, include_blank: true ,class: 'form-control' %>
         </br>
           <%= f.label :course %>
           <%= f.text_field :course, class: 'form-control' %>
 
+        </br>
           <%= f.submit "Search", class: "btn btn-primary" %>
         <% end %>
 
       </div>
     </div>
-  </body>
-</html>
