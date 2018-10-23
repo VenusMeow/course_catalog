@@ -1,3 +1,6 @@
+# UPDATE!!!
+Hi dear TAs! The searching part with the course name now actually works on heroku, thanks to somebody on StackOverflow!
+
 # README
 
 This is the part 2 of PA Rails.
