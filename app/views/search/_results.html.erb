@@ -1,8 +1,3 @@
-<h1 class="text-center">Results</h1>
-<%= link_to 'Back', :back ,class: 'btn btn-info'%>
-
-</br>
-
 <table class = "table table-striped">
   <thead>
     <tr>
@@ -15,7 +10,7 @@
   </thead>
 
   <tbody>
-    <% @courses.each do |course| %>
+    <% @results.each do |course| %>
       <tr>
         <td><%= course.name %></td>
         <td><%= course.code %></td>

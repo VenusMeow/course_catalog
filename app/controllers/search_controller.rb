@@ -1,22 +1,26 @@
 class SearchController < ApplicationController
   def search
+
   end
 
-  def result
+  def create
 
-    if params[:search][:subject] != ""
-      @courses = Course.where(subject_id:  params[:search][:subject]).all
+    if params[:create][:subject] != ""
+      @results = Course.where(subject_id:  params[:create][:subject]).all
       if Rails.env.development?
-        @courses = @courses.where("name LIKE ? ","%#{params[:search][:course].downcase}%").all
+        @results = @results.where("name LIKE ? ","%#{params[:create][:course].downcase}%").all
       else
-        @courses = @courses.where("name ILIKE ? ","%#{params[:search][:course].downcase}%").all
+        @results = @results.where("name ILIKE ? ","%#{params[:create][:course].downcase}%").all
       end
     else
       if Rails.env.development?
-        @courses = Course.where("name LIKE ? ","%#{params[:search][:course].downcase}%").all
+        @results = Course.where("name LIKE ? ","%#{params[:create][:course].downcase}%").all
       else
-        @courses = Course.where("name ILIKE ? ","%#{params[:search][:course].downcase}%").all
+        @results = Course.where("name ILIKE ? ","%#{params[:create][:course].downcase}%").all
       end
+    end
+    respond_to do |format|
+      format.js
     end
   end
 end

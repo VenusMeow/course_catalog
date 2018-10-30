@@ -12,7 +12,7 @@ Rails.application.routes.draw do
   get '/enroll',  to: 'enroll#enroll'
 
   get  '/search',  to: 'search#search'
-  post '/search',  to: 'search#result'
+  post '/search',  to: 'search#create'
 
   get  '/signup',  to: 'users#new'
   post '/signup',  to: 'users#create'
