@@ -14,3 +14,22 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+
+
+  var subject = "";
+  function search_subject(subject_id) {
+    subject = subject_id;
+      $.ajax({
+        method: 'Post',
+        url: '/search',
+        data: { subject: subject_id, course: ""}
+      });
+  };
+
+        function search_course(course) {
+            $.ajax({
+              method: 'Post',
+              url: '/search',
+              data: { subject: subject, course: course}
+            });
+        };

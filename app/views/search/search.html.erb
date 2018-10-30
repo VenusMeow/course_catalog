@@ -8,13 +8,13 @@
 
           <%= f.label :subject %>
         </br>
-          <%= f.collection_select :subject, Subject.order(:id),:id,:name, include_blank: true ,class: 'form-control' %>
+          <%= f.collection_select :subject, Subject.order(:id),:id,:name, {include_blank: true}, {onchange: "search_subject(#{:value});",class: 'form-control',id:'search-subject'} %>
         </br>
           <%= f.label :course %>
-          <%= f.text_field :course, class: 'form-control' %>
+          <%= f.text_field :course, class: 'form-control',id:'search-course',onchange: "search_course(#{:value});" %>
 
         </br>
-          <%= f.submit "Search", class: "btn btn-primary" %>
+
         <% end %>
 
       </div>
