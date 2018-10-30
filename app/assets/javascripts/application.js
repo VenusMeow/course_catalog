@@ -36,4 +36,9 @@
 
         function clear_text(){
           document.getElementById("search-course").value = "";
+          $.ajax({
+            method: 'Post',
+            url: '/search',
+            data: { subject: subject, course: ""},
+          });
         };
