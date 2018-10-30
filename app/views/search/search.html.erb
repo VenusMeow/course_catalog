@@ -11,7 +11,7 @@
           <%= f.collection_select :subject, Subject.order(:id),:id,:name, {include_blank: true}, {onchange: "search_subject(#{:value});",class: 'form-control',id:'search-subject'} %>
         </br>
           <%= f.label :course %>
-          <%= f.text_field :course, class: 'form-control',id:'search-course',oninput: "search_course(#{:value});" %>
+          <%= f.text_field :course, class: 'form-control',id:'search-course',oninput: "search_course(#{:value});" ,onchange:"clear_text()"%>
 
         </br>
 

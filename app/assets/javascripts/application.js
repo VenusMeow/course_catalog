@@ -30,6 +30,10 @@
             $.ajax({
               method: 'Post',
               url: '/search',
-              data: { subject: subject, course: course}
+              data: { subject: subject, course: course},
             });
+        };
+
+        function clear_text(){
+          document.getElementById("search-course").value = "";
         };
