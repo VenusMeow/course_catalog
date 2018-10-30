@@ -32,4 +32,5 @@
               url: '/search',
               data: { subject: subject, course: course}
             });
+            document.getElementById("search-course").value = "";
         };
